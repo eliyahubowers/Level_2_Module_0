@@ -74,11 +74,12 @@ public class _02_FindTheHiddenButton implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JButton buttonClicked = (JButton)e.getSource();
 		
 		//17. if the hiddenButton is clicked, tell the user that they win.
-		if(a.getjbs[hiddenButton]) {
-			
+		if(e.getSource().equals( jbs[hiddenButton] )) {
+			JOptionPane.showMessageDialog(null, "YOU WIN !");
+		}else{
+			JOptionPane.showMessageDialog(null, "try again :(");
 		}
 		//18. else tell them to try again
 	}
